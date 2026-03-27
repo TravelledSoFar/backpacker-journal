@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Backpacker Journal</title>
+    <meta name="description" content="Get in touch with Backpacker Journal. Questions, collaborations, or trip enquiries — we'd love to hear from you.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream:    { 50: '#FAF6F1', 100: '#F0EAE0' },
+                        charcoal: { 900: '#2D2A26', 700: '#4A4640' },
+                        terra:    { 50: '#FDF0EB', 100: '#F9DDD3', 400: '#D8866E', 500: '#C4654A', 600: '#A84E36', 700: '#8C3D2A' },
+                        forest:   { 50: '#EEF5F2', 400: '#5A8F7E', 500: '#3D6B5E', 600: '#2C4F44' },
+                        gold:     { 400: '#E8C87A', 500: '#D4A853' },
+                        taupe:    { 50: '#F5EFE8', 100: '#E8DDD3', 200: '#C9B9A8' }
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body:    ['"DM Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body text-charcoal-900 bg-cream-50">
+
+    <!-- Navigation -->
+    <nav class="bj-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="bj-nav-logo">Backpacker Journal</a>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="bj-nav-link">Home</a>
+                    <a href="destinations.html" class="bj-nav-link">Destinations</a>
+                    <a href="guides.html" class="bj-nav-link">Guides</a>
+                    <a href="blog.html" class="bj-nav-link">Blog</a>
+                    <a href="about.html" class="bj-nav-link">About</a>
+                    <a href="contact.html" class="bj-nav-link active">Contact</a>
+                </div>
+                <!-- Mobile Button -->
+                <button id="mobile-menu-button" class="md:hidden text-charcoal-700 hover:text-terra-500 transition-colors">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bj-mobile-menu">
+            <a href="index.html" class="bj-mobile-link">Home</a>
+            <a href="destinations.html" class="bj-mobile-link">Destinations</a>
+            <a href="guides.html" class="bj-mobile-link">Guides</a>
+            <a href="blog.html" class="bj-mobile-link">Blog</a>
+            <a href="about.html" class="bj-mobile-link">About</a>
+            <a href="contact.html" class="bj-mobile-link active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bj-page-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Get in Touch</h1>
+            <p class="text-xl max-w-3xl mx-auto font-body">
+                Have a question about our trips? Want to collaborate or share your travel story? We'd love to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="bj-section">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <span class="bj-label">Send a message</span>
+                    <div class="bj-divider"></div>
+                    <h2 class="bj-section-heading text-2xl md:text-3xl mb-6">Drop us a line</h2>
+                    <form class="space-y-5" action="https://formspree.io/f/your-form-id" method="POST">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="bj-label block mb-2 text-charcoal-700">Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name" class="bj-input">
+                            </div>
+                            <div>
+                                <label for="email" class="bj-label block mb-2 text-charcoal-700">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="you@example.com" class="bj-input">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="bj-label block mb-2 text-charcoal-700">Subject</label>
+                            <select id="subject" name="subject" class="bj-input">
+                                <option value="">Select a subject</option>
+                                <option value="trip-enquiry">Trip Enquiry</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="story-share">Share Your Story</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="bj-label block mb-2 text-charcoal-700">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..." class="bj-input resize-none"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="bj-btn bj-btn-primary w-full">
+                                Send Message
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="reveal delay-2">
+                    <span class="bj-label">Let's connect</span>
+                    <div class="bj-divider"></div>
+                    <h2 class="bj-section-heading text-2xl md:text-3xl mb-6">Other ways to reach us</h2>
+
+                    <div class="space-y-6">
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-terra-50 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 text-terra-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-semibold text-charcoal-900 mb-1">Email</h3>
+                                <a href="mailto:travelledsofar07@gmail.com" class="text-terra-500 hover:text-terra-600 transition-colors text-sm font-medium">travelledsofar07@gmail.com</a>
+                                <p class="text-xs text-charcoal-700 mt-1">We typically respond within 24&ndash;48 hours</p>
+                            </div>
+                        </div>
+
+                        <!-- Instagram -->
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-forest-50 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 text-forest-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-semibold text-charcoal-900 mb-1">Instagram</h3>
+                                <a href="https://www.instagram.com/travelled_so_far/" target="_blank" class="text-forest-500 hover:text-forest-600 transition-colors text-sm font-medium">@travelled_so_far</a>
+                                <p class="text-xs text-charcoal-700 mt-1">Follow for daily travel updates and behind-the-scenes content</p>
+                            </div>
+                        </div>
+
+                        <!-- Response Time -->
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gold-400/10 rounded-xl flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-semibold text-charcoal-900 mb-1">Response Time</h3>
+                                <p class="text-sm text-charcoal-700">24&ndash;48 hours</p>
+                                <p class="text-xs text-charcoal-700 mt-1">We're often traveling, so please be patient if we're in a different timezone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-12">
+                        <span class="bj-label">Common questions</span>
+                        <div class="bj-divider"></div>
+                        <h3 class="bj-section-heading text-xl mb-6">Frequently Asked Questions</h3>
+                        <div class="space-y-4">
+                            <div class="bj-feature-card">
+                                <h3>Can I share my travel story on your blog?</h3>
+                                <p>Absolutely! We love featuring guest posts from fellow travelers. Send us a message with your story idea and we'll take it from there.</p>
+                            </div>
+                            <div class="bj-feature-card">
+                                <h3>Do you accept sponsored content?</h3>
+                                <p>We're selective about partnerships and only work with brands we genuinely believe in and use ourselves.</p>
+                            </div>
+                            <div class="bj-feature-card">
+                                <h3>Can you help me plan my trip?</h3>
+                                <p>Check out our destination guides first, then reach out with specific questions. We're happy to help where we can.</p>
+                            </div>
+                            <div class="bj-feature-card">
+                                <h3>How do I join a group trip?</h3>
+                                <p>Browse our upcoming trips on the destinations page, then message us on WhatsApp or email to enquire about availability and dates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="bj-cta py-20 text-white">
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Stay Connected</h2>
+            <p class="text-lg mb-8 opacity-90 font-body">
+                Get weekly travel stories, tips, and trip updates delivered to your inbox.
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="bj-newsletter-input flex-1">
+                <button type="submit" class="bj-btn bj-btn-white">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-sm mt-4 opacity-60 font-body">No spam, unsubscribe anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bj-footer py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="bj-footer-logo">Backpacker Journal</a>
+                    <p class="mt-4 text-sm leading-relaxed max-w-md">
+                        Women-led, local-first group trips where you actually meet and bond with locals. Sharing authentic travel stories from the road.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/travelled_so_far/" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="guides.html">Travel Guides</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="https://wa.me/your_number_here" target="_blank">WhatsApp</a></li>
+                        <li><a href="mailto:travelledsofar07@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-xs text-cream-50/40">&copy; 2026 Backpacker Journal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

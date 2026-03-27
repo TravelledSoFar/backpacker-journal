@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guides - Backpacker Journal</title>
+    <meta name="description" content="Practical travel guides including packing lists, budget tips, safety advice, and travel know-how for backpackers and solo travelers.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: { 50: '#FAF6F1', 100: '#F0EAE0' },
+                        charcoal: { 900: '#2D2A26', 700: '#4A4640' },
+                        terra: { 50: '#FDF0EB', 100: '#F9DDD3', 400: '#D8866E', 500: '#C4654A', 600: '#A84E36', 700: '#8C3D2A' },
+                        forest: { 50: '#EEF5F2', 400: '#5A8F7E', 500: '#3D6B5E', 600: '#2C4F44' },
+                        gold: { 400: '#E8C87A', 500: '#D4A853' },
+                        taupe: { 50: '#F5EFE8', 100: '#E8DDD3', 200: '#C9B9A8' }
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body: ['"DM Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body text-charcoal-900 bg-cream-50">
+
+    <!-- Navigation -->
+    <nav class="bj-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="bj-nav-logo">Backpacker Journal</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="bj-nav-link">Home</a>
+                        <a href="destinations.html" class="bj-nav-link">Destinations</a>
+                        <a href="guides.html" class="bj-nav-link active">Guides</a>
+                        <a href="blog.html" class="bj-nav-link">Blog</a>
+                        <a href="about.html" class="bj-nav-link">About</a>
+                        <a href="contact.html" class="bj-nav-link">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-charcoal-700 hover:text-terra-500 transition-colors">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bj-mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bj-mobile-link">Home</a>
+                <a href="destinations.html" class="bj-mobile-link">Destinations</a>
+                <a href="guides.html" class="bj-mobile-link active">Guides</a>
+                <a href="blog.html" class="bj-mobile-link">Blog</a>
+                <a href="about.html" class="bj-mobile-link">About</a>
+                <a href="contact.html" class="bj-mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bj-page-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <span class="bj-label text-terra-400 mb-4 inline-block">Resources</span>
+            <h1 class="text-4xl md:text-5xl font-display font-bold mb-4">Travel Guides</h1>
+            <div class="bj-divider bj-divider-center" style="background: var(--terracotta-light);"></div>
+            <p class="text-xl max-w-3xl mx-auto mt-4">
+                Practical tips, packing lists, budget advice, and everything you need to know for successful backpacking
+            </p>
+        </div>
+    </section>
+
+    <!-- Guide Categories -->
+    <section class="bj-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-3 mb-14 justify-center reveal">
+                <button class="bj-filter-btn bg-terra-500 text-white px-6 py-2.5 rounded-full font-body font-semibold text-sm tracking-wide transition-all hover:bg-terra-600">
+                    All Guides
+                </button>
+                <button class="bj-filter-btn bg-taupe-100 text-charcoal-700 px-6 py-2.5 rounded-full font-body font-semibold text-sm tracking-wide transition-all hover:bg-taupe-200">
+                    Packing &amp; Gear
+                </button>
+                <button class="bj-filter-btn bg-taupe-100 text-charcoal-700 px-6 py-2.5 rounded-full font-body font-semibold text-sm tracking-wide transition-all hover:bg-taupe-200">
+                    Budget Tips
+                </button>
+                <button class="bj-filter-btn bg-taupe-100 text-charcoal-700 px-6 py-2.5 rounded-full font-body font-semibold text-sm tracking-wide transition-all hover:bg-taupe-200">
+                    Safety &amp; Health
+                </button>
+            </div>
+
+            <!-- Packing & Gear Section -->
+            <div class="mb-16 reveal">
+                <span class="bj-label">Essentials</span>
+                <div class="bj-divider"></div>
+                <h2 class="bj-section-heading text-3xl mb-8">Packing &amp; Gear</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Ultimate Packing List -->
+                    <article class="bj-card reveal">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-forest-400 to-forest-600"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-forest">Packing</span>
+                                <span class="text-xs text-charcoal-700 font-body">15 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">The Ultimate 7kg Packing List</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Everything you need for indefinite travel in a carry-on backpack, tested across 6 continents.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- How to Choose the Perfect Backpack -->
+                    <article class="bj-card reveal delay-1">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-terra-400 to-terra-700"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-terracotta">Gear</span>
+                                <span class="text-xs text-charcoal-700 font-body">12 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">How to Choose the Perfect Backpack</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Size, features, and brands - everything you need to know to find your ideal travel companion.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Essential Tech for Digital Nomads -->
+                    <article class="bj-card reveal delay-2">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-gold-400 to-gold-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-gold">Tech</span>
+                                <span class="text-xs text-charcoal-700 font-body">10 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Essential Tech for Digital Nomads</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Laptops, power banks, and gadgets that will keep you connected and productive on the road.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Budget Tips Section -->
+            <div class="mb-16 reveal">
+                <span class="bj-label">Save More</span>
+                <div class="bj-divider"></div>
+                <h2 class="bj-section-heading text-3xl mb-8">Budget Tips</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- How to Travel SE Asia for $25/Day -->
+                    <article class="bj-card reveal">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-terra-500 to-gold-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-terracotta">Budget</span>
+                                <span class="text-xs text-charcoal-700 font-body">18 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">How to Travel Southeast Asia for $25/Day</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Detailed budget breakdown including accommodation, food, transport, and activities.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- 15 Ways to Save on Accommodation -->
+                    <article class="bj-card reveal delay-1">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-forest-500 to-forest-400"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-forest">Accommodation</span>
+                                <span class="text-xs text-charcoal-700 font-body">14 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">15 Ways to Save on Accommodation</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">From Couchsurfing to house sitting, discover budget-friendly alternatives to hotels.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Budget Transportation -->
+                    <article class="bj-card reveal delay-2">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-gold-500 to-terra-400"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-gold">Transport</span>
+                                <span class="text-xs text-charcoal-700 font-body">16 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Budget Transportation Around the World</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Local buses, trains, and ridesharing - how to get around without breaking the bank.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Safety & Health Section -->
+            <div class="mb-16 reveal">
+                <span class="bj-label">Stay Safe</span>
+                <div class="bj-divider"></div>
+                <h2 class="bj-section-heading text-3xl mb-8">Safety &amp; Health</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Solo Travel Safety -->
+                    <article class="bj-card reveal">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-forest-400 to-terra-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-forest">Safety</span>
+                                <span class="text-xs text-charcoal-700 font-body">20 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Solo Travel Safety: Lessons from 5 Years on the Road</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Essential safety tips and mindset shifts that have kept me safe across 30+ countries.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Travel Insurance -->
+                    <article class="bj-card reveal delay-1">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-terra-400 to-terra-600"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-terracotta">Insurance</span>
+                                <span class="text-xs text-charcoal-700 font-body">12 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Travel Insurance: What You Need to Know</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Understanding coverage, choosing the right policy, and when it's worth the investment.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Staying Healthy While Traveling -->
+                    <article class="bj-card reveal delay-2">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-forest-500 to-forest-600"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-forest">Health</span>
+                                <span class="text-xs text-charcoal-700 font-body">15 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Staying Healthy While Traveling</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Vaccinations, first aid kits, and tips for maintaining your health on the road.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Planning & Logistics Section -->
+            <div class="mb-16 reveal">
+                <span class="bj-label">Plan Ahead</span>
+                <div class="bj-divider"></div>
+                <h2 class="bj-section-heading text-3xl mb-8">Planning &amp; Logistics</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Visa Requirements -->
+                    <article class="bj-card reveal">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-gold-400 to-terra-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-gold">Visa</span>
+                                <span class="text-xs text-charcoal-700 font-body">22 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Visa Requirements for Popular Backpacking Destinations</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">A comprehensive guide to visa requirements, costs, and application processes.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- How to Find Cheap Flights -->
+                    <article class="bj-card reveal delay-1">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-terra-500 to-terra-700"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-terracotta">Flights</span>
+                                <span class="text-xs text-charcoal-700 font-body">18 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">How to Find Cheap Flights: A Complete Guide</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Tools, strategies, and timing tips to score the best flight deals for your travels.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- Setting Up Digital Nomad Workspace -->
+                    <article class="bj-card reveal delay-2">
+                        <div class="bj-card-img h-48">
+                            <div class="w-full h-full bg-gradient-to-br from-forest-400 to-gold-500"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bj-tag bj-tag-forest">Digital Nomad</span>
+                                <span class="text-xs text-charcoal-700 font-body">16 min read</span>
+                            </div>
+                            <h3 class="text-xl font-display font-semibold mb-2">
+                                <a href="post.html" class="hover:text-terra-500 transition-colors">Setting Up Your Digital Nomad Workspace</a>
+                            </h3>
+                            <p class="text-sm text-charcoal-700 leading-relaxed mb-4">Essential tools, apps, and strategies for working remotely while traveling.</p>
+                            <a href="post.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">Read Guide &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="bj-cta py-20 text-white">
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="bj-label text-white/70 mb-4 inline-block">Stay Updated</span>
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Get Travel Tips Delivered</h2>
+            <p class="text-lg mb-8 opacity-90 font-body">
+                Join 2,000+ backpackers getting weekly travel tips and destination guides
+            </p>
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="bj-newsletter-input flex-1">
+                <button type="submit" class="bj-btn bj-btn-white">
+                    Subscribe
+                </button>
+            </form>
+            <p class="text-sm mt-4 opacity-70 font-body">No spam, unsubscribe anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bj-footer py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="bj-footer-logo">Backpacker Journal</a>
+                    <p class="mt-4 text-sm leading-relaxed max-w-md">
+                        Sharing authentic travel stories and practical guides for budget-conscious backpackers and solo travelers.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/travelled_so_far/" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="mailto:travelledsofar07@gmail.com" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="guides.html">Travel Guides</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="https://www.instagram.com/travelled_so_far/" target="_blank">Instagram</a></li>
+                        <li><a href="mailto:travelledsofar07@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-xs text-cream-50/40">&copy; 2026 Backpacker Journal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

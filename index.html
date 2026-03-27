@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpacker Journal - Women-Led, Local-First Group Trips</title>
+    <meta name="description" content="Women-founded, women-led travel company curating offbeat, local-first group trips where you actually meet and bond with locals, not just click photos.">
+    <meta property="og:title" content="Backpacker Journal - Women-Led Group Trips">
+    <meta property="og:description" content="Women-led travel company curating offbeat, local-first group trips for young travelers.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./Images/DSC04495.JPG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream:    { 50: '#FAF6F1', 100: '#F0EAE0' },
+                        charcoal: { 900: '#2D2A26', 700: '#4A4640' },
+                        terra:    { 50: '#FDF0EB', 100: '#F9DDD3', 400: '#D8866E', 500: '#C4654A', 600: '#A84E36', 700: '#8C3D2A' },
+                        forest:   { 50: '#EEF5F2', 400: '#5A8F7E', 500: '#3D6B5E', 600: '#2C4F44' },
+                        gold:     { 400: '#E8C87A', 500: '#D4A853' },
+                        taupe:    { 50: '#F5EFE8', 100: '#E8DDD3', 200: '#C9B9A8' }
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body:    ['"DM Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-body text-charcoal-900 bg-cream-50">
+
+    <!-- Navigation -->
+    <nav class="bj-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="bj-nav-logo">Backpacker Journal</a>
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="bj-nav-link active">Home</a>
+                    <a href="destinations.html" class="bj-nav-link">Destinations</a>
+                    <a href="guides.html" class="bj-nav-link">Guides</a>
+                    <a href="blog.html" class="bj-nav-link">Blog</a>
+                    <a href="about.html" class="bj-nav-link">About</a>
+                    <a href="contact.html" class="bj-nav-link">Contact</a>
+                </div>
+                <!-- Mobile Button -->
+                <button id="mobile-menu-button" class="md:hidden text-charcoal-700 hover:text-terra-500 transition-colors">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bj-mobile-menu">
+            <a href="index.html" class="bj-mobile-link active">Home</a>
+            <a href="destinations.html" class="bj-mobile-link">Destinations</a>
+            <a href="guides.html" class="bj-mobile-link">Guides</a>
+            <a href="blog.html" class="bj-mobile-link">Blog</a>
+            <a href="about.html" class="bj-mobile-link">About</a>
+            <a href="contact.html" class="bj-mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bj-hero">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="anim-slide-left">
+                    <div class="bj-hero-badge mb-6">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gold-400"></span>
+                        Women-founded &middot; Women-led
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6">
+                        Women-led, local&#8209;first<br>
+                        <span class="italic text-terra-400">group trips</span> for<br>
+                        young travelers
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
+                        We curate offbeat, local-first group trips where you actually meet and bond with locals, not just click photos.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/your_number_here" target="_blank" class="bj-btn bj-btn-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Chat on WhatsApp
+                        </a>
+                        <a href="#trips" class="bj-btn bj-btn-outline">
+                            See upcoming trips
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                    </div>
+                    <p class="mt-6 text-sm text-cream-50 opacity-50 font-body tracking-wide">
+                        Small groups &middot; Offbeat routes &middot; Local homestays &middot; Safety-first
+                    </p>
+                </div>
+                <div class="hidden lg:block anim-slide-right delay-2">
+                    <div class="bj-hero-img relative h-[520px]">
+                        <img src="Images/DSC04495.JPG" alt="Traveler smiling in the mountains" class="h-full w-full object-cover object-left">
+                        <div class="absolute bottom-4 left-4 bg-black/40 backdrop-blur-md rounded-full px-4 py-2 text-xs text-cream-50 font-body tracking-wide">
+                            Real trip &middot; Real moment
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women-founded, women-led -->
+    <section class="bj-section bg-cream-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <span class="bj-label">Our Story</span>
+                    <div class="bj-divider"></div>
+                    <h2 class="bj-section-heading text-3xl md:text-4xl mb-4">Women-founded,<br>women-led travel</h2>
+                    <p class="bj-section-subtitle text-lg mb-4">
+                        We're obsessed with designing trips where you feel safe, seen, and deeply connected to the places you visit.
+                    </p>
+                    <p class="text-charcoal-700 text-sm leading-relaxed mb-8">
+                        On every trip, we intentionally seek out women-run homestays, women guides, women-owned small businesses, and local female artisans.
+                        This doesn't just improve safety and comfort &mdash; it sends money directly to local women and their families.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bj-feature-card">
+                            <h3>Women-run stays</h3>
+                            <p>Homestays where women lead operations, hosting you like family.</p>
+                        </div>
+                        <div class="bj-feature-card">
+                            <h3>Local women guides</h3>
+                            <p>Guides who bring real stories, not scripted monologues.</p>
+                        </div>
+                        <div class="bj-feature-card">
+                            <h3>Women-owned businesses</h3>
+                            <p>We choose experiences that put money in local women's hands.</p>
+                        </div>
+                        <div class="bj-feature-card">
+                            <h3>Artisans &amp; creators</h3>
+                            <p>Meet weavers, cooks, and craftswomen keeping traditions alive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-2">
+                    <div class="bg-white rounded-3xl overflow-hidden border border-taupe-100 shadow-lg">
+                        <div class="relative h-64 md:h-72 bj-slider" id="real-stories-slider">
+                            <img src="Images/DSC04524.JPG" alt="Traveler with local landscape" class="absolute inset-0 w-full h-full object-cover slider-image opacity-100">
+                            <img src="Images/DSC04161.JPG" alt="Traveler on the road" class="absolute inset-0 w-full h-full object-cover slider-image opacity-0">
+                            <img src="Images/WhatsApp Image 2026-03-10 at 5.34.49 PM.jpeg" alt="Travel group moment" class="absolute inset-0 w-full h-full object-cover slider-image opacity-0">
+                            <img src="Images/WhatsApp Image 2026-03-10 at 5.39.04 PM.jpeg" alt="Group photo" class="absolute inset-0 w-full h-full object-cover slider-image opacity-0" style="object-position: center 60%;">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                            <button type="button" class="bj-slider-btn bj-slider-btn-prev" id="real-stories-prev">&#8249;</button>
+                            <button type="button" class="bj-slider-btn bj-slider-btn-next" id="real-stories-next">&#8250;</button>
+                            <div class="absolute bottom-3 left-4 flex items-center gap-2 text-xs text-white">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm font-body tracking-wide">Real trip moments</span>
+                                <div class="flex items-center gap-1" id="real-stories-dots">
+                                    <span class="bj-slider-dot active h-1.5 rounded-full"></span>
+                                    <span class="bj-slider-dot inactive h-1.5 rounded-full"></span>
+                                    <span class="bj-slider-dot inactive h-1.5 rounded-full"></span>
+                                    <span class="bj-slider-dot inactive h-1.5 rounded-full"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <span class="bj-label">Real stories, not stock photos</span>
+                            <p class="text-charcoal-700 text-sm leading-relaxed">
+                                Every itinerary starts as a personal trip. These are real moments from the road &mdash; hitchhiking, homestays, chai breaks, and long mountain drives.
+                            </p>
+                            <a href="blog.html" class="inline-flex items-center text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">
+                                Read our travel stories
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Non-negotiables -->
+    <section class="bj-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="bj-label">What we stand for</span>
+                <div class="bj-divider bj-divider-center"></div>
+                <h2 class="bj-section-heading text-3xl md:text-4xl mb-3">Our non-negotiables</h2>
+                <p class="bj-section-subtitle text-lg max-w-2xl mx-auto">
+                    Safety, small groups, local interactions, slow pace, and real stories from our own travels.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-5 reveal delay-2">
+                <div class="bj-feature-card">
+                    <h3>Safety-first</h3>
+                    <p>Vetted homestays, trusted transport, clear safety briefings &amp; on-trip support.</p>
+                </div>
+                <div class="bj-feature-card">
+                    <h3>Small groups</h3>
+                    <p>Intimate groups (8&ndash;12) so you actually get to know people.</p>
+                </div>
+                <div class="bj-feature-card">
+                    <h3>Local interactions</h3>
+                    <p>Meals with families, village walks, workshops with local women.</p>
+                </div>
+                <div class="bj-feature-card">
+                    <h3>Slow pace</h3>
+                    <p>Fewer check-ins, more time in each place. Less rush, more connection.</p>
+                </div>
+                <div class="bj-feature-card">
+                    <h3>Real stories</h3>
+                    <p>Every itinerary is based on our own travel &mdash; not lifted from a brochure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Must-know things -->
+    <section class="bj-section bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="bj-label">Travel with heart</span>
+                <div class="bj-divider bj-divider-center"></div>
+                <h2 class="bj-section-heading text-3xl md:text-4xl mb-3">Must-know things before you travel</h2>
+                <p class="bj-section-subtitle text-lg max-w-3xl mx-auto">
+                    Travel is about gently entering someone else's home, culture and everyday life. We invite you to travel with curiosity, kindness and an open heart.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6 reveal delay-2">
+                <article class="bj-feature-card">
+                    <h3>You are a traveller, not a critic</h3>
+                    <p>The food may be different, people may behave differently, and the language, habits and timings may not be what you are used to &mdash; and that is the beauty of travel.</p>
+                </article>
+                <article class="bj-feature-card">
+                    <h3>Every place has its own gentle manners</h3>
+                    <p>We share guidelines on local customs, clothing and greetings &mdash; especially for religious or traditional spaces. Small gestures show care for the people who host us.</p>
+                </article>
+                <article class="bj-feature-card">
+                    <h3>Be open to stepping out of your comfort zone</h3>
+                    <p>You might eat with your hands, sit on the floor, share a table with new people. Welcome new tastes, weather and levels of comfort as part of the experience.</p>
+                </article>
+                <article class="bj-feature-card">
+                    <h3>Connect with places, do not just consume them</h3>
+                    <p>A few words in the local language, a warm smile, patient listening can create beautiful connections. We choose local businesses and women-led spaces.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="bj-section bg-cream-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="bj-label">Simple process</span>
+                <div class="bj-divider bj-divider-center"></div>
+                <h2 class="bj-section-heading text-3xl md:text-4xl mb-3">How it works</h2>
+                <p class="bj-section-subtitle text-lg max-w-2xl mx-auto">
+                    Human-first process from first enquiry to post-trip feedback.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-10 reveal delay-2">
+                <div class="bj-step">
+                    <span class="bj-step-number">01</span>
+                    <span class="bj-label text-forest-500">Step 1</span>
+                    <h3 class="font-display text-lg font-semibold mt-2 mb-2">Enquiry &rarr; WhatsApp chat</h3>
+                    <p class="text-sm text-charcoal-700 leading-relaxed">Browse trips and hit &ldquo;Chat on WhatsApp&rdquo;. We understand your dates, budget, vibe, and comfort levels.</p>
+                </div>
+                <div class="bj-step">
+                    <span class="bj-step-number">02</span>
+                    <span class="bj-label text-forest-500">Step 2</span>
+                    <h3 class="font-display text-lg font-semibold mt-2 mb-2">Call &amp; booking</h3>
+                    <p class="text-sm text-charcoal-700 leading-relaxed">Short call to answer questions, share the detailed itinerary, and confirm if the group &amp; route fit you.</p>
+                </div>
+                <div class="bj-step">
+                    <span class="bj-step-number">03</span>
+                    <span class="bj-label text-forest-500">Step 3</span>
+                    <h3 class="font-display text-lg font-semibold mt-2 mb-2">Pre-trip group &amp; support</h3>
+                    <p class="text-sm text-charcoal-700 leading-relaxed">We add you to a pre-trip WhatsApp group, share packing lists, answer doubts, and support you throughout.</p>
+                </div>
+            </div>
+            <div class="text-center reveal delay-3">
+                <a href="https://wa.me/your_number_here" target="_blank" class="bj-btn bj-btn-forest">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp to start
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming trips -->
+    <section id="trips" class="bj-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12 reveal">
+                <div>
+                    <span class="bj-label">Explore</span>
+                    <div class="bj-divider"></div>
+                    <h2 class="bj-section-heading text-3xl md:text-4xl mb-2">Upcoming group trips</h2>
+                    <p class="bj-section-subtitle text-lg">Story-led itineraries with clear group size, vibe, and safety details.</p>
+                </div>
+                <a href="destinations.html" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors flex items-center gap-1">
+                    View all trips
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 reveal delay-2">
+                <!-- Trip 1 -->
+                <article class="bj-trip-card">
+                    <div class="trip-gradient" style="background: linear-gradient(135deg, #7B9E89, #3D6B5E);"></div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bj-tag bj-tag-forest">Women-led</span>
+                            <span class="text-xs text-charcoal-700 font-body">Small group &middot; Culture</span>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold">Offbeat mountain homestays</h3>
+                        <p class="text-sm text-charcoal-700 leading-relaxed">Slow-paced week in a mountain village, women-run homestays, chai with grandmoms, and walks through local farms.</p>
+                        <ul class="text-xs text-charcoal-700 space-y-1">
+                            <li>Group size: 8&ndash;10</li>
+                            <li>Vibe: slow, community, culture-first</li>
+                            <li>Perfect for: first-time solo women travelers</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-2">
+                            <a href="#" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">See itinerary &rarr;</a>
+                            <a href="https://wa.me/your_number_here?text=Hi%2C%20I%27m%20interested%20in%20the%20offbeat%20mountain%20homestays%20trip" target="_blank" class="text-sm font-semibold text-forest-500 hover:text-forest-600 transition-colors">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Trip 2 -->
+                <article class="bj-trip-card">
+                    <div class="trip-gradient" style="background: linear-gradient(135deg, #C4654A, #A84E36);"></div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bj-tag bj-tag-terracotta">Culture &amp; food</span>
+                            <span class="text-xs text-charcoal-700 font-body">Women-friendly &middot; Easy pace</span>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold">Coastal culture &amp; kitchen stories</h3>
+                        <p class="text-sm text-charcoal-700 leading-relaxed">Stay with local families, learn regional recipes from women home-chefs, and explore quiet coastal towns.</p>
+                        <ul class="text-xs text-charcoal-700 space-y-1">
+                            <li>Group size: 10&ndash;12</li>
+                            <li>Vibe: food, stories, slow walks</li>
+                            <li>Difficulty: very easy</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-2">
+                            <a href="#" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">See itinerary &rarr;</a>
+                            <a href="https://wa.me/your_number_here?text=Hi%2C%20I%27m%20interested%20in%20the%20coastal%20culture%20trip" target="_blank" class="text-sm font-semibold text-forest-500 hover:text-forest-600 transition-colors">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- Trip 3 -->
+                <article class="bj-trip-card">
+                    <div class="trip-gradient" style="background: linear-gradient(135deg, #D4A853, #9A7B2F);"></div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="bj-tag bj-tag-gold">Women-only</span>
+                            <span class="text-xs text-charcoal-700 font-body">Moderate &middot; Nature</span>
+                        </div>
+                        <h3 class="font-display text-lg font-semibold">Women-only weekend escapes</h3>
+                        <p class="text-sm text-charcoal-700 leading-relaxed">Short, safe weekend escapes to reset &mdash; perfect if you're new to group trips and want to test the waters.</p>
+                        <ul class="text-xs text-charcoal-700 space-y-1">
+                            <li>Group size: 8&ndash;10</li>
+                            <li>Vibe: supportive, playful, nature</li>
+                            <li>Ideal for: young professionals &amp; students</li>
+                        </ul>
+                        <div class="flex items-center justify-between pt-2">
+                            <a href="#" class="text-sm font-semibold text-terra-500 hover:text-terra-600 transition-colors">See itinerary &rarr;</a>
+                            <a href="https://wa.me/your_number_here?text=Hi%2C%20I%27m%20interested%20in%20the%20women-only%20weekend%20escapes" target="_blank" class="text-sm font-semibold text-forest-500 hover:text-forest-600 transition-colors">WhatsApp</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live vibes from Instagram -->
+    <section id="live-vibes" class="bj-section bj-dark-section py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 reveal">
+                <div>
+                    <span class="text-xs font-body font-semibold tracking-widest uppercase text-terra-400">Instagram</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-cream-50 mt-2 mb-2">Live vibes from our trips</h2>
+                    <p class="text-cream-50/60 max-w-xl font-body">
+                        See what's happening on the road right now. Real groups, real moments.
+                    </p>
+                </div>
+                <a href="https://www.instagram.com/travelled_so_far/" target="_blank" class="text-sm font-semibold text-terra-400 hover:text-terra-300 transition-colors flex items-center gap-1">
+                    Follow @travelled_so_far
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+            <div class="bg-charcoal-900/50 rounded-3xl p-4 md:p-6 lg:p-8 border border-white/5 backdrop-blur-sm reveal delay-2">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
+                    <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/p/CqLGbqXJxc0/embed" class="w-full h-full" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/p/DUKRjF_EWgO/embed" class="w-full h-full" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/p/CvmuYhRpM6g/embed" class="w-full h-full" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                    <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden">
+                        <iframe src="https://www.instagram.com/p/Cvjbp4lMmVn/embed" class="w-full h-full" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+                <p class="mt-4 text-xs text-cream-50/30 text-center font-body">
+                    Reels are embedded directly from Instagram. Click any reel to open it on Instagram.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bj-section bg-cream-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 reveal">
+                <span class="bj-label">Kind words</span>
+                <div class="bj-divider bj-divider-center"></div>
+                <h2 class="bj-section-heading text-3xl md:text-4xl mb-3">What our travelers say</h2>
+                <p class="bj-section-subtitle text-lg max-w-2xl mx-auto">
+                    What people remember most is the safety, warmth, and real local connections.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 reveal delay-2">
+                <div class="bj-testimonial">
+                    <p class="mb-4">"This was my first group trip without friends or family and I felt safe from day one. The hosts and women guides felt like elder sisters, not strangers."</p>
+                    <div>
+                        <p class="text-sm font-semibold text-charcoal-900 font-display">Aditi, 26</p>
+                        <p class="text-xs text-charcoal-700">Women-only weekend escape</p>
+                    </div>
+                </div>
+                <div class="bj-testimonial">
+                    <p class="mb-4">"We weren't just sightseeing &mdash; we were having chai in people's homes, helping in the kitchen, and hearing stories from local women about their lives."</p>
+                    <div>
+                        <p class="text-sm font-semibold text-charcoal-900 font-display">Riya, 24</p>
+                        <p class="text-xs text-charcoal-700">Offbeat mountain homestays</p>
+                    </div>
+                </div>
+                <div class="bj-testimonial">
+                    <p class="mb-4">"The slow pace was perfect. No rushing from point A to B just to click photos. We actually had time to breathe, journal, and connect."</p>
+                    <div>
+                        <p class="text-sm font-semibold text-charcoal-900 font-display">Niharika, 28</p>
+                        <p class="text-xs text-charcoal-700">Coastal culture &amp; kitchen stories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bj-cta py-20 text-white">
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Thinking about your next women-led trip?</h2>
+            <p class="text-lg mb-8 opacity-90 font-body">
+                Tell us your dates, budget, and vibe &mdash; we'll match you to the right itinerary or craft something custom.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/your_number_here" target="_blank" class="bj-btn bj-btn-white">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Chat on WhatsApp
+                </a>
+                <a href="mailto:travelledsofar07@gmail.com" class="bj-btn bj-btn-outline">
+                    Email us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bj-footer py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="bj-footer-logo">Backpacker Journal</a>
+                    <p class="mt-4 text-sm leading-relaxed max-w-md">
+                        Women-led, local-first group trips where you actually meet and bond with locals. Sharing authentic travel stories from the road.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/travelled_so_far/" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-terra-400/50 hover:bg-terra-400/10 transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="guides.html">Travel Guides</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-cream-50 uppercase tracking-wider mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="contact.html">Get in Touch</a></li>
+                        <li><a href="https://wa.me/your_number_here" target="_blank">WhatsApp</a></li>
+                        <li><a href="mailto:travelledsofar07@gmail.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-xs text-cream-50/40">&copy; 2026 Backpacker Journal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
