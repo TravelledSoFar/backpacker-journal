@@ -739,13 +739,13 @@ a {
 .waitlist-destination {
   display: inline-block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--terracotta);
-  background: var(--cream-dark);
-  padding: 4px 12px;
+  color: var(--white);
+  background: var(--terracotta);
+  padding: 6px 16px;
   border-radius: 999px;
 }
 
