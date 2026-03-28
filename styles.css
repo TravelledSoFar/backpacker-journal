@@ -567,8 +567,8 @@ a {
 
 .hero-vibes-slide {
   flex-shrink: 0;
-  width: 290px;
-  height: 520px;
+  width: 255px;
+  height: 455px;
   border-radius: 1rem;
   overflow: hidden;
   background: #000;
