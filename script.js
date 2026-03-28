@@ -144,5 +144,54 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // ——— Waitlist countdown & modal ———
+    const tripDate = new Date('2026-05-01T00:00:00');
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = tripDate - now;
+        if (diff <= 0) return;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        const text = days + 'd ' + hours + 'h left';
+
+        const btn = document.getElementById('waitlist-countdown');
+        if (btn) btn.textContent = text;
+
+        const modal = document.getElementById('modal-countdown');
+        if (modal) modal.textContent = days + ' days ' + hours + ' hours left to join';
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    const waitlistBtn = document.getElementById('waitlist-btn');
+    const waitlistModal = document.getElementById('waitlist-modal');
+    const waitlistOverlay = document.getElementById('waitlist-overlay');
+    const waitlistClose = document.getElementById('waitlist-close');
+    const waitlistForm = document.getElementById('waitlist-form');
+
+    if (waitlistBtn && waitlistModal) {
+        waitlistBtn.addEventListener('click', function () {
+            waitlistModal.classList.remove('hidden');
+        });
+
+        waitlistOverlay.addEventListener('click', function () {
+            waitlistModal.classList.add('hidden');
+        });
+
+        waitlistClose.addEventListener('click', function () {
+            waitlistModal.classList.add('hidden');
+        });
+
+        waitlistForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            waitlistForm.classList.add('hidden');
+            document.getElementById('waitlist-success').classList.remove('hidden');
+        });
+    }
+
     console.log('Backpacker Journal loaded');
 });

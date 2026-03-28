@@ -97,6 +97,13 @@
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </a>
                     </div>
+                    <div class="flex justify-center sm:justify-start mt-4">
+                        <button id="waitlist-btn" class="bj-btn bj-btn-waitlist group">
+                            <span class="waitlist-pulse"></span>
+                            <span>Next trip waitlist</span>
+                            <span class="bj-waitlist-countdown" id="waitlist-countdown"></span>
+                        </button>
+                    </div>
                     <p class="mt-6 text-sm text-cream-50 opacity-50 font-body tracking-wide">
                         Small groups &middot; Offbeat routes &middot; Local homestays &middot; Safety-first
                     </p>
@@ -499,6 +506,34 @@
             </div>
         </div>
     </footer>
+
+    <!-- Waitlist Modal -->
+    <div id="waitlist-modal" class="waitlist-modal hidden">
+        <div class="waitlist-overlay" id="waitlist-overlay"></div>
+        <div class="waitlist-popup">
+            <button id="waitlist-close" class="waitlist-close">&times;</button>
+            <div class="waitlist-header">
+                <span class="waitlist-destination">Vietnam</span>
+                <h3 class="font-display text-2xl font-bold mt-1">Next Trip Waitlist</h3>
+                <div class="waitlist-timer" id="modal-countdown"></div>
+            </div>
+            <p class="text-sm text-charcoal-700 mb-4">Spots fill fast. Join the waitlist to get early access and trip details.</p>
+            <form id="waitlist-form" class="space-y-3">
+                <input type="text" name="name" placeholder="Your name" required class="waitlist-input">
+                <input type="email" name="email" placeholder="Email address" required class="waitlist-input">
+                <input type="tel" name="phone" placeholder="Phone / WhatsApp number" class="waitlist-input">
+                <button type="submit" class="bj-btn bj-btn-primary w-full justify-center">
+                    Join the waitlist
+                </button>
+            </form>
+            <div id="waitlist-success" class="hidden text-center py-6">
+                <div class="text-4xl mb-2">&#10003;</div>
+                <h4 class="font-display text-xl font-semibold mb-1">You're on the list!</h4>
+                <p class="text-sm text-charcoal-700">We'll reach out with trip details soon.</p>
+            </div>
+            <p class="text-xs text-charcoal-700/50 mt-3 text-center">No spam. We'll only contact you about this trip.</p>
+        </div>
+    </div>
 
     <script async src="https://www.instagram.com/embed.js"></script>
     <script src="script.js"></script>
