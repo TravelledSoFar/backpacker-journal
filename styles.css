@@ -547,6 +547,55 @@ a {
   background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
 }
 
+/* === VIBES CAROUSEL === */
+.vibes-carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.vibes-track {
+  display: flex;
+  gap: 1rem;
+  animation: vibes-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.vibes-track:hover {
+  animation-play-state: paused;
+}
+
+.vibes-slide {
+  flex-shrink: 0;
+  width: 280px;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #000;
+}
+
+.vibes-slide iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@keyframes vibes-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .vibes-slide {
+    width: 220px;
+    height: 400px;
+  }
+}
+
 /* === TESTIMONIAL === */
 .bj-testimonial {
   background: var(--white);
